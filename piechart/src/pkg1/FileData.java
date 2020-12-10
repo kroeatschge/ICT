@@ -8,15 +8,18 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-/**
- * @author MACH 08.12.2020 FileData class to handle file input
- */
+/****************************************
+ * Date: 08.12.2020
+ * Title: FileData class to handle file input
+ * @author MACH 
+ * @version 1.0
+ ****************************************/
 public class FileData {
 	/**
 	 * method to read a File line by line into an ArrayList
-	 * 
-	 * @param file name of file to read
-	 * @return
+	 * @param file name of file to read. Eg. mydata.txt
+	 * @return ArryList containing the read lines
+	 * @throws IOException for handling file access errors
 	 */
 	public ArrayList<String> readFile(String file) throws IOException {
 		// ArrayList to store lines

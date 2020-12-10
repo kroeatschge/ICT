@@ -18,32 +18,37 @@ import org.jfree.ui.ApplicationFrame;
 
 
 /**
- * @author MACH 08.12.2020 Chart class to setup and display a pieChart
+ * Date: 08.12.2020 
+ * Chart class to setup and display a pieChart
+ * @author MACH 
+ * @version 1.0
  */
-
-/****************************************
- * Author name: Object Refinery Limited
- * Date: n.d. 
- * Title: JFreeChart
- * Source: https://www.jfree.org/jfreechart/
- ****************************************/
-
-/****************************************
- * Author name: tutorialspoint.com 
- * Date: n.d. 
- * Title: JFreeChart - File Interface
- * Source: https://www.tutorialspoint.com/jfreechart/jfreechart_pie_chart.htm
- ****************************************/
 public class Chart extends ApplicationFrame {
-	// Dataset to store all chart data
+	/****************************************
+	 * Author name: Object Refinery Limited
+	 * Date: n.d. 
+	 * Title: JFreeChart
+	 * Source: https://www.jfree.org/jfreechart/
+	 ****************************************/
+
+	/****************************************
+	 * Author name: tutorialspoint.com 
+	 * Date: n.d. 
+	 * Title: JFreeChart - File Interface
+	 * Source: https://www.tutorialspoint.com/jfreechart/jfreechart_pie_chart.htm
+	 ****************************************/
+	
+	/**  Dataset to store all chart data*/
 	private DefaultPieDataset myDataset = new DefaultPieDataset();
+	/**  Title for chart and Window */
 	private String myTitle;
+	/** pie Chart */
 	private JFreeChart chart;
 
 	/**
 	 * Constructor method for chart
 	 * 
-	 * @param title
+	 * @param title used for Window and Chart title
 	 */
 	public Chart(String title) {
 		super(title);
@@ -55,7 +60,7 @@ public class Chart extends ApplicationFrame {
 	/**
 	 * Create a panel and a chart using myDataset for data
 	 * 
-	 * @return
+	 * @return reference of the created chartPanel
 	 */
 	public JPanel createPanel() {
 		// JFreeChart chart = createChart(createDataset());
@@ -81,8 +86,8 @@ public class Chart extends ApplicationFrame {
 	/**
 	 * add a new Dataset to chart data
 	 * 
-	 * @param myText
-	 * @param myValue
+	 * @param myText Text to be displayed
+	 * @param myValue Value to be displayed
 	 */
 	public void addDataset(String myText, int myValue) {
 		myDataset.setValue(myText, myValue);
@@ -90,6 +95,8 @@ public class Chart extends ApplicationFrame {
 
 	/**
 	 * method to save the final chart as image
+	 * @param myWidth width in pixels
+	 * @param myLenght length in pixels
 	 */
 	public void saveAsImage(int myWidth, int myLenght) {
 

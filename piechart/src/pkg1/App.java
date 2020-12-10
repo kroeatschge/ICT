@@ -7,10 +7,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import org.jfree.ui.RefineryUtilities;
 
-/**
- * @author MACH 08.12.2020 Display a chart about my ICT50718 progress
+/****************************************
+ * Date: 08.12.2020
+ * Title: Display a chart about my ICT50718 progress
+ * @author MACH 
  * @version 1.0
- */
+ ****************************************/
 public class App {
 	/**
 	 * working method of the App
@@ -70,7 +72,7 @@ public class App {
 	/**
 	 * Startup of the application
 	 * 
-	 * @param args
+	 * @param args not used
 	 */
 	public static void main(String[] args) {
 

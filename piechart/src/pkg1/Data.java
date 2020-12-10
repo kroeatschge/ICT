@@ -3,9 +3,13 @@
  */
 package pkg1;
 
-/**
- * @author MACH 08.12.2020 Data class to collect data objects
- */
+
+/****************************************
+ * Date: 08.12.2020
+ * Title: Data class to collect data objects
+ * @author MACH 
+ * @version 1.0
+ ****************************************/
 public class Data {
 	private String text;
 	private int value;
@@ -64,7 +68,7 @@ public class Data {
 	/**
 	 * getter method for text
 	 * 
-	 * @return
+	 * @return returns the text attribute of Data object
 	 */
 	public String getText() {
 		return text;
@@ -73,7 +77,7 @@ public class Data {
 	/**
 	 * getter method for value
 	 * 
-	 * @return
+	 * @return returns the value attribute of Data object
 	 */
 	public int getValue() {
 		return value;
