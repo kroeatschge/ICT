@@ -1,0 +1,214 @@
+<!DOCTYPE html><html><head><meta charset='utf-8' /><title>Weather lore SCRUM</title><style>
+.show{
+	background-color:#777;
+	color:white;
+	padding:4px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.right {
+	position:relative;
+	float:right;
+	right:0;
+	margin-right: 10px;
+}
+
+.yellow{border:solid 2px #d7d742;padding:-2px; background-color:#d7d742;margin-bottom:3px;}
+.orange{border:solid 2px #dd9a3c;padding:-2px;background-color:#dd9a3c;margin-bottom:3px;}
+.red{border:solid 2px #cc3333;padding:-2px;background-color:#cc3333;margin-bottom:3px;}
+.green{border:solid 2px #22C328;padding:-2px;background-color:#22C328; margin-bottom:3px;}
+.blue {border:solid 2px #3366cc;padding:-2px;background-color:#3366cc; margin-bottom:3px;}
+.purple {border:solid 2px #8c28bd;padding:-2px;background-color:#8c28bd; margin-bottom:3px;}
+
+del{
+color:green
+}
+
+table {
+border:1 black;
+width:90%;
+margin-bottom:50px;
+margin-left:30px;
+background:rgb(233,238,241);
+-moz-border-bottom-right-radius: 10px;
+-moz-border-bottom-left-radius: 10px;
+-ms-border-bottom-right-radius: 10px;
+-ms-border-bottom-left-radius: 10px;
+-webkit-border-bottom-right-radius: 10px;
+-webkit-border-bottom-left-radius: 10px;
+-o-border-bottom-right-radius: 10px;
+-o-border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+td {
+vertical-align:top;
+text-align:left;
+padding:5px;
+}
+caption {
+text-align:left;
+background:rgb(233,238,241);
+padding-top:5px;
+padding-left:20px;
+padding-bottom:5px;
+-moz-border-top-right-radius: 10px;
+-moz-border-top-left-radius: 10px;
+-ms-border-top-right-radius: 10px;
+-ms-border-top-left-radius: 10px;
+-webkit-border-top-right-radius: 10px;
+-webkit-border-top-left-radius: 10px;
+-o-border-top-right-radius: 10px;
+-o-border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-top-left-radius: 10px;
+box-shadow: 5px 0 4px -4px rgba(0,0,0,0.3);
+
+}
+thead {
+border-top:1px #225 solid;
+}
+tbody tr:nth-child(odd)    { background:rgb(222,226,229); }
+tbody tr:nth-child(even)    { background:rgb(210,214,217); }
+body { background-color:#164B69;}
+h1 { color:#fff;}
+.list {
+	background:rgb(233,238,241);
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+	padding:15px 15px 0px 15px;
+	width:320px;
+	float:left;
+	margin:10px;
+}
+.list ul{
+	width:100%;
+	list-style-type:none;
+	padding:0;
+}
+.list li{
+	margin:0 -15px 0 -15px;
+	font-size:1.2em;
+	padding:15px 0 15px 15px;
+	border-top:1px solid #ddd;
+}
+.list p{
+	font-size:0.8em;
+	color:#555;
+}
+.list a{
+	color:black;
+	text-decoration:none;
+}
+.list a:hover li{
+	background:#279;
+	color:white;
+}
+
+.comments h1{
+	font-size:1.5em;
+	color:#000;
+}
+
+.comments h2{
+	font-size:1.5em;
+}
+.comments{
+	margin-top:-5px;
+	font-size:0.8em;
+}
+.downloader{
+background: #87e0fd; /* Old browsers */
+background: -moz-linear-gradient(top,  #87e0fd 0%, #53cbf1 40%, #05abe0 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#87e0fd), color-stop(40%,#53cbf1), color-stop(100%,#05abe0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* IE10+ */
+background: linear-gradient(top,  #87e0fd 0%,#53cbf1 40%,#05abe0 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 ); /* IE6-9 */
+
+	border-radius: 3px;
+	padding:5px;
+	
+	margin-right:10px;
+	font-size:1em;
+	text-decoration:none;
+	color:#fff;
+}
+
+.downloader:hover{
+	box-shadow: 0px 0px 15px rgba(255,255,255,0.6);
+	padding:8px;
+	margin-left:-4px;
+	margin-right:8px;
+	cursor:pointer;
+}
+
+.masonry,
+.masonry .masonry-brick {
+  -webkit-transition-duration: 0.7s;
+     -moz-transition-duration: 0.7s;
+      -ms-transition-duration: 0.7s;
+       -o-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+.masonry {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.masonry .masonry-brick {
+  -webkit-transition-property: left, right, top;
+     -moz-transition-property: left, right, top;
+      -ms-transition-property: left, right, top;
+       -o-transition-property: left, right, top;
+          transition-property: left, right, top;
+}
+
+@media print{
+.downloader,.info-list{
+ display:none;
+}
+body,caption,table{
+box-shadow:none!important;
+background:none!important;
+-webkit-border-radius:0;
+-moz-border-radius:0;
+-ms-border-radius:0;
+-o-border-radius:0;
+border-radius:0;
+border-spacing:0;margin:0;
+}
+h1{color:black;}
+th,td{border:#999 solid 1px;}
+}
+.show{
+	-webkit-print-color-adjust:exact;
+}
+</style></head><body><h1><span id='download'></span><span id='trello-link'></span><span id='printme'></span>Weather lore SCRUM <span class='right'>2020-12-23</span></h1><table><caption><h2>1. Backlog/Planning <span class='show right'>17</span></h2></caption><col width='20%' /><col width='30%' /><col width='5%' /><col width='25%' /><col width='5%' /><col width='10%' /><col width='5%' /><thead><tr><th scope='col'>Name</th><th scope='col'>Description</th><th scope='col'>Due Date</th><th scope='col'>Checklists</th><th scope='col'>Members</th><th scope='col'>Labels</th><th scope='col'>Votes</th></tr></thead><tbody><tr><td scope='row'><b>1. Development</b></td><td><div class='comments'><p>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p></div></td><td>None</td><td></td><td></td><td></td><td>0</td></tr><tr><td scope='row'><b>1.3 Android APP</b></td><td><div class='comments'></div></td><td>None</td><td></td><td></td><td><div class='show blue'>1.3&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>1.3.3 Display advertisment</b></td><td><div class='comments'><p>Load and display advertisement from Google
+Load a new advertisement when the widget or the app is displayed</p></div></td><td>None</td><td></td><td></td><td><div class='show blue'>1.3&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>1.3.4 Buy pro version</b></td><td><div class='comments'><p>Show a button to buy PRO version via in-app purchase.
+Hide button and Advertisement section in APP + widget  if already bought.</p></div></td><td>None</td><td></td><td></td><td><div class='show blue'>1.3&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>2. Design</b></td><td><div class='comments'><p>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p></div></td><td>None</td><td></td><td></td><td></td><td>0</td></tr><tr><td scope='row'><b>2.3 Icons &amp; Fonts</b></td><td><div class='comments'></div></td><td>None</td><td></td><td></td><td><div class='show red'>2.2&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>3.3 Beta test</b></td><td><div class='comments'></div></td><td>None</td><td></td><td></td><td><div class='show lime'>3.3&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>3.3.1 Conduct beta test</b></td><td><div class='comments'><p>Conduct a beta test on at least 10 different devices. 
+Make sure to include IOS 13 + 14, Android 9 + 10, mobile phones and tablets.</p></div></td><td>None</td><td></td><td></td><td><div class='show lime'>3.3&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>3.3.2 Beta test feedback</b></td><td><div class='comments'><p>Discuss beta test results and create additional tasks if required</p></div></td><td>None</td><td></td><td></td><td><div class='show lime'>3.3&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>3. Implementation</b></td><td><div class='comments'><p>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p></div></td><td>None</td><td></td><td></td><td></td><td>0</td></tr><tr><td scope='row'><b>3.2 App store texts</b></td><td><div class='comments'></div></td><td>None</td><td></td><td></td><td><div class='show black'>3.2&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>3.2.2 upload APP to Apple store</b></td><td><div class='comments'><p>Upload APP to Apple store and initiate check through Apple</p></div></td><td>None</td><td></td><td></td><td><div class='show black'>3.2&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>3.2.3 upload APP to Google store</b></td><td><div class='comments'><p>Upload APP to Google store and initiate check through Google</p></div></td><td>None</td><td></td><td></td><td><div class='show black'>3.2&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>3.4 Documentation</b></td><td><div class='comments'></div></td><td>None</td><td></td><td></td><td><div class='show black'>3.4&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>3.4.1 technical documentation</b></td><td><div class='comments'><p>Create a technical documentation showing the infrastructure, administration, interfaces.</p></div></td><td>None</td><td></td><td></td><td><div class='show black'>3.4&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>3.4.2 User documentation</b></td><td><div class='comments'><p>Create a simple user documentation showing how to add widgets in IOS + Android.</p></div></td><td>None</td><td></td><td></td><td><div class='show black'>3.4&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>3.5 Testing Environment</b></td><td><div class='comments'></div></td><td>2021-2-22</td><td></td><td></td><td><div class='show red'>3.5&nbsp;</div></td><td>0</td></tr></tbody></table><table><caption><h2>2. Doing <span class='show right'>2</span></h2></caption><col width='20%' /><col width='30%' /><col width='5%' /><col width='25%' /><col width='5%' /><col width='10%' /><col width='5%' /><thead><tr><th scope='col'>Name</th><th scope='col'>Description</th><th scope='col'>Due Date</th><th scope='col'>Checklists</th><th scope='col'>Members</th><th scope='col'>Labels</th><th scope='col'>Votes</th></tr></thead><tbody><tr><td scope='row'><b>3.5.1 Test environment access</b></td><td><div class='comments'><p>Setup accounts for all test users</p></div></td><td>2021-2-22</td><td></td><td></td><td><div class='show red'>3.5&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>3.5.2 Test environment training</b></td><td><div class='comments'><p>Attend training for our test environment</p></div></td><td>2021-3-6</td><td></td><td></td><td><div class='show red'>3.5&nbsp;</div></td><td>0</td></tr></tbody></table><table><caption><h2>3. Review <span class='show right'>1</span></h2></caption><col width='20%' /><col width='30%' /><col width='5%' /><col width='25%' /><col width='5%' /><col width='10%' /><col width='5%' /><thead><tr><th scope='col'>Name</th><th scope='col'>Description</th><th scope='col'>Due Date</th><th scope='col'>Checklists</th><th scope='col'>Members</th><th scope='col'>Labels</th><th scope='col'>Votes</th></tr></thead><tbody><tr><td scope='row'><b>2.3.2 APP Fonts</b></td><td><div class='comments'><p>Create or purchase a font to be used in the APP</p></div></td><td>2021-2-9</td><td></td><td></td><td><div class='show red'>2.2&nbsp;</div></td><td>0</td></tr></tbody></table><table><caption><h2>4. Done <span class='show right'>21</span></h2></caption><col width='20%' /><col width='30%' /><col width='5%' /><col width='25%' /><col width='5%' /><col width='10%' /><col width='5%' /><thead><tr><th scope='col'>Name</th><th scope='col'>Description</th><th scope='col'>Due Date</th><th scope='col'>Checklists</th><th scope='col'>Members</th><th scope='col'>Labels</th><th scope='col'>Votes</th></tr></thead><tbody><tr><td scope='row'><b>1.1 Backend Server</b></td><td><div class='comments'></div></td><td>2021-1-30</td><td></td><td></td><td><div class='show green'>1.1&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>1.1.1 Database design</b></td><td><div class='comments'><p>A database created to store weather lore data.
+Season, Month, Week, Day, weather lore text</p></div></td><td>2021-1-13</td><td></td><td></td><td><div class='show green'>1.1&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>1.1.2 Administration website</b></td><td><div class='comments'><p>Website to add, delete, change weather lore data in the database</p></div></td><td>2021-1-23</td><td></td><td></td><td><div class='show green'>1.1&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>1.1.3 Synchronization webservice</b></td><td><div class='comments'><p>Web service to read data from database and return it as JSON.
+Selected data range = today + 30 days</p></div></td><td>2021-1-30</td><td></td><td></td><td><div class='show green'>1.1&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>1.2 IOS APP</b></td><td><div class='comments'></div></td><td>2020-12-24</td><td></td><td></td><td><div class='show yellow'>1.2&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>1.2.1 Data storage</b></td><td><div class='comments'><p>Query data from web service and store result locally. 
+When new data is received, the old data is deleted from the device.</p></div></td><td>2021-2-2</td><td></td><td></td><td><div class='show yellow'>1.2&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>1.2.2 Display weather lore</b></td><td><div class='comments'><p>Get data from local storage and display a weather lore. 
+Access data in these sequence: day, week, month, season.
+Mark the entry locally that it has already been used, don&#39;t use it a second time.</p></div></td><td>2021-2-6</td><td></td><td></td><td><div class='show yellow'>1.2&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>1.2.3 Display advertisment</b></td><td><div class='comments'><p>Load and display advertisement from Apple
+Load a new advertisement when the widget or the app is displayed</p></div></td><td>2021-2-10</td><td></td><td></td><td><div class='show yellow'>1.2&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>1.2.4 Buy pro version</b></td><td><div class='comments'><p>Show a button to buy PRO version via in-app purchase.
+Hide button and Advertisement section in APP + widget  if already bought.</p></div></td><td>2021-2-13</td><td></td><td></td><td><div class='show yellow'>1.2&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>1.3.1 Data storage</b></td><td><div class='comments'><p>Query data from web service and store result locally.
+When new data is received, the old data is deleted from the device.</p></div></td><td>2021-2-17</td><td></td><td></td><td><div class='show blue'>1.3&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>1.3.2 Display weather lore</b></td><td><div class='comments'><p>Get data from local storage and display a weather lore. 
+Access data in these sequence: day, week, month, season.
+Mark the entry locally that it has already been used, don&#39;t use it a second time.</p></div></td><td>2021-2-20</td><td></td><td></td><td><div class='show blue'>1.3&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>2.1 Frontend</b></td><td><div class='comments'></div></td><td>2021-1-12</td><td></td><td></td><td><div class='show orange'>2.1&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>2.1.1 Weather lore display</b></td><td><div class='comments'><p>Create a visual for the weather lore display. 
+It includes a seasonal background image + the weather lore text.
+Prepare a place in the layout to display Advertisements.
+Add a button to share the weather lore with other APPs.</p></div></td><td>2021-1-16</td><td></td><td></td><td><div class='show orange'>2.1&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>2.1.2 Background visuals</b></td><td><div class='comments'><p>Create 12 high quality background visuals. Each of it represents a different month of a year.</p></div></td><td>2021-1-23</td><td></td><td></td><td><div class='show orange'>2.1&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>2.1.3 Advertisements</b></td><td><div class='comments'><p>Create a layout showing where to place advertisements in the APP</p></div></td><td>2021-1-28</td><td></td><td></td><td><div class='show orange'>2.1&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>2.2 Widget</b></td><td><div class='comments'></div></td><td>2021-2-3</td><td></td><td></td><td><div class='show red'>2.2&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>2.2.1 Widget design</b></td><td><div class='comments'><p>Create a layout for the widget. It must include the weather lore text and a spot for advertisements. </p></div></td><td>2021-2-2</td><td></td><td></td><td><div class='show red'>2.2&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>2.3.1 APP Icons</b></td><td><div class='comments'><p>Create high quality APP icons to use with the APP. Obey the different required formats for different devices and platforms. IOS 13+ 14, Android 10 + 9.</p></div></td><td>2021-2-6</td><td></td><td></td><td><div class='show red'>2.2&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>3.1 Gather data</b></td><td><div class='comments'></div></td><td>2021-1-23</td><td></td><td></td><td><div class='show purple'>3.1&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>3.1.1 Gather weather lore data</b></td><td><div class='comments'><p>Create a spreadsheet with weather lore data. It must contain 365 different datasets. </p></div></td><td>2021-1-23</td><td></td><td></td><td><div class='show purple'>3.1&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>3.2.1 Create texts for APP store displays</b></td><td><div class='comments'><p>Create textual descriptions for the APP stores.
+Check best practices beforehand.</p></div></td><td>2021-2-6</td><td></td><td></td><td><div class='show black'>3.2&nbsp;</div></td><td>0</td></tr></tbody></table><table><caption><h2>Ceremonies <span class='show right'>15</span></h2></caption><col width='20%' /><col width='30%' /><col width='5%' /><col width='25%' /><col width='5%' /><col width='10%' /><col width='5%' /><thead><tr><th scope='col'>Name</th><th scope='col'>Description</th><th scope='col'>Due Date</th><th scope='col'>Checklists</th><th scope='col'>Members</th><th scope='col'>Labels</th><th scope='col'>Votes</th></tr></thead><tbody><tr><td scope='row'><b>1 Sprint</b></td><td><div class='comments'><p>get the basics up and running</p></div></td><td>2021-1-23</td><td></td><td></td><td><div class='show black'>S&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>1.1 Sprint Planning</b></td><td><div class='comments'></div></td><td>2021-1-11</td><td></td><td></td><td><div class='show black'>S&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>1.2 Sprint Review</b></td><td><div class='comments'></div></td><td>2021-1-22</td><td></td><td></td><td><div class='show black'>S&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>2 Sprint</b></td><td><div class='comments'><p>its all about the APPs</p></div></td><td>2021-2-6</td><td></td><td></td><td><div class='show black'>S&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>2.1 Sprint Planning</b></td><td><div class='comments'></div></td><td>2021-1-25</td><td></td><td></td><td><div class='show black'>S&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>2.2 Sprint Review</b></td><td><div class='comments'></div></td><td>2021-2-5</td><td></td><td></td><td><div class='show black'>S&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>3 Sprint</b></td><td><div class='comments'><p>about the APPs continues</p></div></td><td>2021-2-20</td><td></td><td></td><td><div class='show black'>S&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>3.1 Sprint Planning</b></td><td><div class='comments'></div></td><td>2021-2-8</td><td></td><td></td><td><div class='show black'>S&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>3.2 Sprint Review</b></td><td><div class='comments'></div></td><td>2021-2-19</td><td></td><td></td><td><div class='show black'>S&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>4 Sprint</b></td><td><div class='comments'><p>Testing Environment Training</p></div></td><td>2021-3-6</td><td></td><td></td><td><div class='show black'>S&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>4.1 Sprint Planning</b></td><td><div class='comments'></div></td><td>2021-2-22</td><td></td><td></td><td><div class='show black'>S&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>4.2 Sprint Review</b></td><td><div class='comments'></div></td><td>2021-3-5</td><td></td><td></td><td><div class='show black'>S&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>5. Sprint</b></td><td><div class='comments'><p>finishing APPs</p></div></td><td>2021-3-20</td><td></td><td></td><td><div class='show black'>S&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>5.1 Sprint Planning</b></td><td><div class='comments'></div></td><td>2021-3-8</td><td></td><td></td><td><div class='show black'>S&nbsp;</div></td><td>0</td></tr><tr><td scope='row'><b>5.2 Sprint Review</b></td><td><div class='comments'></div></td><td>2021-3-19</td><td></td><td></td><td><div class='show black'>S&nbsp;</div></td><td>0</td></tr></tbody></table></body></html>
